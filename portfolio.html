@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de NELSON ART PRO - Design graphique, photos et vidéos par Nelson KABUZI.">
+    <title>Portfolio | NELSON ART PRO</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* ===== CORRECTION GRILLE : 3 COLONNES FIXES SUR TOUS LES ÉCRANS ===== */
+        .gallery__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        /* Mobile Large : on garde 3 colonnes */
+        @media screen and (max-width: 767px) {
+            .gallery__grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .gallery-item__overlay {
+                padding: 8px;
+            }
+            
+            .gallery-item__category {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+            
+            .gallery-item__title {
+                font-size: 10px;
+                display: none; /* Cacher le titre sur mobile pour gagner de la place */
+            }
+            
+            .gallery-item__zoom {
+                width: 32px;
+                height: 32px;
+                font-size: 12px;
+            }
+            
+            .gallery-item__zoom--play {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+            
+            .gallery-item__image {
+                aspect-ratio: 1/1; /* Format carré sur mobile */
+            }
+        }
+        
+        /* Petit Mobile : on garde 3 colonnes */
+        @media screen and (max-width: 480px) {
+            .gallery__grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            
+            .gallery-item__image {
+                aspect-ratio: 1/1;
+                border-radius: 6px;
+            }
+            
+            .gallery-item__category {
+                font-size: 7px;
+                letter-spacing: 0.5px;
+            }
+            
+            .gallery-item__zoom {
+                width: 28px;
+                height: 28px;
+                font-size: 10px;
+            }
+            
+            .gallery-item__zoom--play {
+                width: 36px;
+                height: 36px;
+                font-size: 12px;
+            }
+        }
+
+        /* Très petit écran : exceptionnellement 3 colonnes */
+        @media screen and (max-width: 350px) {
+            .gallery__grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+            }
+            
+            .gallery-item__image {
+                aspect-ratio: 1/1;
+                border-radius: 4px;
+            }
+            
+            .gallery-item__overlay {
+                padding: 4px;
+            }
+            
+            .gallery-item__category {
+                font-size: 6px;
+            }
+            
+            .gallery-item__zoom {
+                width: 24px;
+                height: 24px;
+                font-size: 9px;
+            }
+        }
+        
+        /* Filtres adaptés au mobile */
+        @media screen and (max-width: 767px) {
+            .gallery__filters {
+                gap: 6px;
+                padding: 0 5px;
+            }
+            
+            .filter-btn {
+                font-size: 10px;
+                padding: 6px 10px;
+                gap: 4px;
+                border-radius: 20px;
+            }
+            
+            .filter-btn i {
+                font-size: 9px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .filter-btn {
+                font-size: 9px;
+                padding: 5px 8px;
+                gap: 3px;
+            }
+            
+            .filter-btn i {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="preloader-text">NELSON</span>
+                <span class="preloader-dot">ART</span>
+                <span class="preloader-sub">PRO</span>
+            </div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">NELSON <span class="logo-accent">ART</span> PRO</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="a-propos.html" class="nav__link">À propos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link active">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--cta">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun" style="display: none;"></i>
+                    <span class="theme-toggle__switch" id="theme-toggle"></span>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        
+        <!-- PAGE HERO -->
+        <section class="page-hero page-hero--small">
+            <div class="page-hero__bg" style="background-image: url('assets/images/portfolio/portfolio-hero.jpg');"></div>
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content container reveal fade-up">
+                <span class="section__badge">Réalisations</span>
+                <h1 class="page-hero__title">Mon <span class="text-accent">Portfolio</span></h1>
+            </div>
+        </section>
+
+        <!-- GALERIE FILTRABLE -->
+        <section class="gallery section">
+            <div class="container">
+                
+                <!-- FILTRES -->
+                <div class="gallery__filters reveal fade-up" id="gallery-filters">
+                    <button class="filter-btn filter-btn--active" data-filter="all">
+                        <i class="fa-solid fa-grid-2"></i> Tous
+                    </button>
+                    <button class="filter-btn" data-filter="design">
+                        <i class="fa-solid fa-pen-nib"></i> Design
+                    </button>
+                    <button class="filter-btn" data-filter="photos">
+                        <i class="fa-solid fa-camera"></i> Photos
+                    </button>
+                    <button class="filter-btn" data-filter="videos">
+                        <i class="fa-solid fa-video"></i> Vidéos
+                    </button>
+                </div>
+                
+                <!-- GRILLE GALERIE -->
+                <div class="gallery__grid" id="gallery-grid">
+                    
+                    <!-- DESIGN GRAPHIQUE -->
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CHARTE GRAPHIQUE NAP PAGE DE GARDE copie.jpg" alt="Charte graphique NAP - Page de garde" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Charte graphique - Page de garde</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CHARTE GRAPHIQUE NAP COULEURE copie.jpg" alt="Charte graphique NAP - Couleurs" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Charte graphique - Couleurs</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CHARTE GRAPHIQUE NAP DECLINAISON LOGO copie.jpg" alt="Charte graphique NAP - Déclinaison logo" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Charte graphique - Déclinaison logo</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CHARTE GRAPHIQUE NAP IDEE LOGO copie.jpg" alt="Charte graphique NAP - Idée logo" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Charte graphique - Idée logo</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CHARTE GRAPHIQUE NAP INTRO copie.jpg" alt="Charte graphique NAP - Introduction" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Charte graphique - Introduction</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CHARTE GRAPHIQUE NAPBIOGRAPHIE copie.jpg" alt="Charte graphique NAP - Biographie" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Charte graphique - Biographie</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/image_2.jpeg" alt="Design graphique" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Création graphique</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/HBD DESIGN BAMBA copie 2.jpg" alt="Design anniversaire" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Design Anniversaire</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/PUB NAP AUTRE copie.jpg" alt="Publicité NAP" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Publicité NAP</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/NAP PACKAGING copie.jpg" alt="Packaging NAP" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Packaging NAP</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CALENDRIER NAP 2025 OK copie.jpg" alt="Calendrier NAP 2025" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Calendrier NAP 2025</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/CARTE VISITE NAP COMM copie.jpg" alt="Affiche Princess Ministries" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Affiche Princess Ministries</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item reveal fade-up" data-category="design">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/design/image_3.jpeg" alt="Communication digitale" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Design</span>
+                                <h3 class="gallery-item__title">Communication Digitale</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PHOTOS -->
+                    <div class="gallery-item reveal fade-up" data-category="photos">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/photos/image_12.jpeg" alt="Cérémonie de mariage" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Photo</span>
+                                <h3 class="gallery-item__title">Cérémonie de Mariage</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="photos">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/photos/image_10.jpeg" alt="Reportage photo" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Photo</span>
+                                <h3 class="gallery-item__title">Reportage Photo</h3>
+                                <button class="gallery-item__zoom" aria-label="Voir l'image" onclick="openLightbox(this)">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- VIDÉOS -->
+                    <div class="gallery-item reveal fade-up" data-category="videos">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/videos/image_11.jpeg" alt="Clip musical" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Vidéo</span>
+                                <h3 class="gallery-item__title">Clip Musical</h3>
+                                <button class="gallery-item__zoom gallery-item__zoom--play" aria-label="Lire la vidéo" onclick="openLightbox(this, 'video')">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="videos">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/videos/image_1.jpeg" alt="Reportage vidéo" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Vidéo</span>
+                                <h3 class="gallery-item__title">Reportage Vidéo</h3>
+                                <button class="gallery-item__zoom gallery-item__zoom--play" aria-label="Lire la vidéo" onclick="openLightbox(this, 'video')">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item reveal fade-up" data-category="videos">
+                        <div class="gallery-item__image">
+                            <img src="assets/images/portfolio/videos/image_5.jpeg" alt="Podcast" loading="lazy">
+                            <div class="gallery-item__overlay">
+                                <span class="gallery-item__category">Vidéo</span>
+                                <h3 class="gallery-item__title">Podcast</h3>
+                                <button class="gallery-item__zoom gallery-item__zoom--play" aria-label="Lire la vidéo" onclick="openLightbox(this, 'video')">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div><!-- /gallery__grid -->
+                
+            </div><!-- /container -->
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__overlay" id="lightbox-close"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" id="lightbox-close-btn" aria-label="Fermer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="lightbox__prev" aria-label="Précédent">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="lightbox__next" aria-label="Suivant">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="lightbox__media" id="lightbox-media">
+                <!-- Contenu dynamique -->
+            </div>
+            <div class="lightbox__info" id="lightbox-info">
+                <span class="lightbox__category"></span>
+                <h3 class="lightbox__title"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        NELSON <span class="logo-accent">ART</span> PRO
+                    </a>
+                    <p class="footer__description">
+                        Communication visuelle et production multimédia.<br>New Vision, New World.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/nelsondevillas.kabuzi" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nelsondevillas?igsh=YzljYTk1ODg3Zg==" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/Nelsonartprodu1" class="footer__social-link" aria-label="X" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://vm.tiktok.com/ZS9FjSMYXDHpe-QXuNu/" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__nav-title">Contact</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:nelsonekabuzi@gmail.com">nelsonekabuzi@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+243973638617">+243 97 36 38 617</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 NELSON ART PRO. Tous droits réservés.</p>
+                <p class="footer__tagline">DEBVISE: New Vision, New World.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery-filter.js"></script>
+</body>
+</html>

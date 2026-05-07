@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez NELSON ART PRO - Nelson KABUZI pour vos projets de design graphique et production audiovisuelle.">
+    <title>Contact | NELSON ART PRO</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-mode">
+    
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="preloader-text">NELSON</span>
+                <span class="preloader-dot">ART</span>
+                <span class="preloader-sub">PRO</span>
+            </div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">NELSON <span class="logo-accent">ART</span> PRO</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link ">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="a-propos.html" class="nav__link">À propos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--cta active">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun" style="display: none;"></i>
+                    <span class="theme-toggle__switch" id="theme-toggle"></span>
+                </div>
+            </div>
+            
+            <!-- Mobile Toggle -->
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        
+        <section class="page-hero page-hero--small">
+            <div class="page-hero__bg" style="background-image: url('assets/images/contact/contact-hero.jpg');"></div>
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content container reveal fade-up">
+                <span class="section__badge">Contact</span>
+                <h1 class="page-hero__title">Travaillons <span class="text-accent">ensemble</span></h1>
+            </div>
+        </section>
+
+        <section class="contact section">
+            <div class="container">
+                <div class="contact__grid">
+                    
+                    <!-- Formulaire -->
+                    <div class="contact__form-wrapper reveal fade-left">
+                        <h2 class="contact__form-title">Envoyez-moi un message</h2>
+                        <form class="contact__form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                                <span class="form-error" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                                <span class="form-error" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="design">Design Graphique</option>
+                                    <option value="production">Production Vidéo</option>
+                                    <option value="formation">Formation</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+                                <span class="form-error" id="message-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full">
+                                <span>Envoyer le message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <p class="form-success" id="form-success" style="display: none;">
+                                <i class="fa-solid fa-circle-check"></i> Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                            </p>
+                        </form>
+                    </div>
+                    
+                    <!-- Infos Contact -->
+                    <div class="contact__info reveal fade-right">
+                        <div class="contact__info-card">
+                            <h3>Coordonnées</h3>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <div>
+                                        <span>Email</span>
+                                        <a href="mailto:nelsonekabuzi@gmail.com">nelsonekabuzi@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div>
+                                        <span>Téléphone</span>
+                                        <a href="https://wa.me/243973638617?text=Bonjour%20je%20souhaite%20plus%20d'informations">+243 97 36 38 617</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div>
+                                        <span>Localisation</span>
+                                        <span>Bukavu, RD Congo</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="contact__social-card">
+                            <h3>Suivez-moi</h3>
+                            <div class="contact__social-links">
+                                <a href="https://www.facebook.com/nelsondevillas.kabuzi" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <span>NELSON DE VILLAS KABUZI</span>
+                                </a>
+                                <a href="https://www.instagram.com/nelsondevillas?igsh=YzljYTk1ODg3Zg==" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span>NELSON ART PRO</span>
+                                </a>
+                                <a href="https://x.com/Nelsonartprodu1" target="_blank" rel="noopener" class="social-link" aria-label="X">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                    <span>NELSON ART PRO</span>
+                                </a>
+                                <a href="t.me/Nelsonart" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
+                                    <i class="fa-brands fa-telegram"></i>
+                                    <span>NELSON ART PRO</span>
+                                </a>
+                                <a href="https://vm.tiktok.com/ZS9FjSMYXDHpe-QXuNu/" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                    <span>NELSON ART PRO</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        NELSON <span class="logo-accent">ART</span> PRO
+                    </a>
+                    <p class="footer__description">
+                        Communication visuelle et production multimédia.<br>New Vision, New World.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/nelsondevillas.kabuzi" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nelsondevillas?igsh=YzljYTk1ODg3Zg==" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/Nelsonartprodu1" class="footer__social-link" aria-label="X" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://vm.tiktok.com/ZS9FjSMYXDHpe-QXuNu/" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__nav-title">Contact</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:nelsonekabuzi@gmail.com">nelsonekabuzi@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+243973638617">+243 97 36 38 617</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 NELSON ART PRO. Tous droits réservés.</p>
+                <p class="footer__tagline">DEBVISE: New Vision, New World.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NELSON ART PRO - Portfolio professionnel de Nelson KABUZI. Production audiovisuelle, design graphique et communication visuelle. New Vision, New World.">
+    <meta name="keywords" content="Nelson Kabuzi, Nelson Art Pro, portfolio, design graphique, production vidéo, Bukavu, réalisateur">
+    
+    <title>NELSON ART PRO | Portfolio - Communication Visuelle</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-mode">
+    
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="preloader-text">NELSON</span>
+                <span class="preloader-dot">ART</span>
+                <span class="preloader-sub">PRO</span>
+            </div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">NELSON <span class="logo-accent">ART</span> PRO</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="a-propos.html" class="nav__link">À propos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--cta">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun" style="display: none;"></i>
+                    <span class="theme-toggle__switch" id="theme-toggle"></span>
+                </div>
+            </div>
+            
+            <!-- Mobile Toggle -->
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero__overlay"></div>
+            <!-- Remplacer par votre image/vidéo de fond -->
+            <div class="hero__bg" style="background-image: url('assets/images/accueil/hero-bg.jpg');">
+                <!-- Option vidéo : remplacer par une balise <video> -->
+            </div>
+            <div class="hero__content container">
+                <div class="hero__text reveal fade-up">
+                    <p class="hero__badge">DEVISE</p>
+                    <h1 class="hero__title">
+                        New Vision,<br>
+                        <span class="hero__title--accent">New World</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Communication visuelle • Design graphique • Production audiovisuelle
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="portfolio.html" class="btn btn--primary">
+                            <span>Découvrir mes créations</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="btn btn--outline">
+                            <span>Me contacter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator reveal fade-in">
+                <span class="scroll-indicator__text">Défiler</span>
+                <div class="scroll-indicator__line"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT PREVIEW SECTION -->
+        <section class="about-preview section" id="about-preview">
+            <div class="container">
+                <div class="about-preview__grid">
+                    <div class="about-preview__image reveal fade-left">
+                        <div class="image-wrapper">
+                            <!-- Remplacer par votre photo -->
+                            <img src="assets/images/a-propos/image_7.jpeg" alt="Nelson KABUZI - Producteur et Réalisateur" loading="lazy">
+                            <div class="image-wrapper__accent"></div>
+                        </div>
+                    </div>
+                    <div class="about-preview__content reveal fade-right">
+                        <span class="section__badge">À propos</span>
+                        <h2 class="section__title">Qui est <span class="text-accent">Nelson KABUZI ?</span></h2>
+                        <p class="about-preview__text">
+                            Producteur, réalisateur et designer graphique de formation. Gradué en sciences 
+                            de l'information et de la communication, et licencié en Edition et Multimédia 
+                            à l'Université Officielle de Bukavu.
+                        </p>
+                        <p class="about-preview__text">
+                            Par sa créativité et son sens rigoureux du travail, il a su produire des clips 
+                            musicaux d'artistes locaux, des reportages, couvrir des cérémonies de mariages 
+                            et bien plus encore.
+                        </p>
+                        <a href="a-propos.html" class="btn btn--secondary">
+                            <span>En savoir plus</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO PREVIEW SECTION -->
+        <section class="portfolio-preview section section--dark" id="portfolio-preview">
+            <div class="container">
+                <div class="section__header reveal fade-up">
+                    <span class="section__badge">Portfolio</span>
+                    <h2 class="section__title">Une vision, <span class="text-accent">des créations</span></h2>
+                    <p class="section__description">
+                        Découvrez une sélection de mes travaux récents en design graphique, photographie et production vidéo.
+                    </p>
+                </div>
+                
+                <div class="portfolio-preview__grid reveal fade-up">
+                    <!-- Carte Design Graphique -->
+                    <a href="portfolio.html?filter=design" class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <!-- Remplacer par votre image -->
+                            <img src="assets/images/portfolio/design/image_8.jpeg" alt="Design Graphique" loading="lazy">
+                            <div class="portfolio-card__overlay">
+                                <span class="portfolio-card__category">Design Graphique</span>
+                                <span class="portfolio-card__link">Voir les projets <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Carte Vidéos -->
+                    <a href="portfolio.html?filter=videos" class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <!-- Remplacer par votre image -->
+                            <img src="assets/images/portfolio/videos/image_5.jpeg" alt="Production Vidéo" loading="lazy">
+                            <div class="portfolio-card__overlay">
+                                <span class="portfolio-card__category">Vidéos</span>
+                                <span class="portfolio-card__link">Voir les projets <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Carte Photos -->
+                    <a href="portfolio.html?filter=photos" class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <!-- Remplacer par votre image -->
+                            <img src="assets/images/portfolio/photos/image_10.jpeg" alt="Photographie" loading="lazy">
+                            <div class="portfolio-card__overlay">
+                                <span class="portfolio-card__category">Photos</span>
+                                <span class="portfolio-card__link">Voir les projets <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES PREVIEW SECTION -->
+        <section class="services-preview section" id="services-preview">
+            <div class="container">
+                <div class="section__header reveal fade-up">
+                    <span class="section__badge">Services</span>
+                    <h2 class="section__title">Ce que je peux faire <span class="text-accent">pour vous</span></h2>
+                </div>
+                
+                <div class="services-preview__grid reveal fade-up">
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="service-card__title">Design Graphique</h3>
+                        <p class="service-card__text">
+                            Création d'identités visuelles, affiches événementielles, supports publicitaires et communication digitale.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="service-card__title">Production</h3>
+                        <p class="service-card__text">
+                            Reportages, clips musicaux, podcasts et couverture de cérémonies. Une production soignée de bout en bout.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="service-card__title">Formation</h3>
+                        <p class="service-card__text">
+                            Montage vidéo, design graphique, filmage et photographie. Des formations pratiques pour développer vos compétences.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="services-preview__cta reveal fade-up">
+                    <a href="services.html" class="btn btn--primary">
+                        <span>Tous les services</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / CITATION SECTION -->
+        <section class="cta section" id="cta">
+            <div class="cta__bg">
+                <!-- Remplacer par votre image de fond -->
+                <img src="assets/images/accueil/cta-bg.jpg" alt="" loading="lazy">
+            </div>
+            <div class="cta__overlay"></div>
+            <div class="cta__content container reveal fade-up">
+                <blockquote class="cta__quote">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Vendre l'image de marque, communiquer à travers des productions audio-visuelles et le design graphique.</p>
+                </blockquote>
+                <h2 class="cta__title">Prêt à donner vie à <span class="text-accent">votre projet ?</span></h2>
+                <a href="contact.html" class="btn btn--primary btn--large">
+                    <span>Travaillons ensemble</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        NELSON <span class="logo-accent">ART</span> PRO
+                    </a>
+                    <p class="footer__description">
+                        Communication visuelle et production multimédia. New Vision, New World.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/nelsondevillas.kabuzi" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nelsondevillas?igsh=YzljYTk1ODg3Zg==" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/Nelsonartprodu1" class="footer__social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://vm.tiktok.com/ZS9FjSMYXDHpe-QXuNu/" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__nav-title">Contact</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:nelsonekabuzi@gmail.com">nelsonekabuzi@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="https://wa.me/243973638617?text=Bonjour%20je%20souhaite%20plus%20d'informations">+243 97 36 38 617</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 NELSON ART PRO. Tous droits réservés.</p>
+                <p class="footer__tagline">DEVISE: New Vision, New World.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

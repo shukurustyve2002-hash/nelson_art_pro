@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services de NELSON ART PRO - Design graphique, production audiovisuelle et formations.">
+    <title>Services | NELSON ART PRO</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-mode">
+    
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="preloader-text">NELSON</span>
+                <span class="preloader-dot">ART</span>
+                <span class="preloader-sub">PRO</span>
+            </div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">NELSON <span class="logo-accent">ART</span> PRO</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link ">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="a-propos.html" class="nav__link">À propos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link active">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--cta">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun" style="display: none;"></i>
+                    <span class="theme-toggle__switch" id="theme-toggle"></span>
+                </div>
+            </div>
+            
+            <!-- Mobile Toggle -->
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        
+        <section class="page-hero page-hero--small">
+            <div class="page-hero__bg" style="background-image: url('assets/images/services/services-hero.jpg');"></div>
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content container reveal fade-up">
+                <span class="section__badge">Prestations</span>
+                <h1 class="page-hero__title">Mes <span class="text-accent">Services</span></h1>
+            </div>
+        </section>
+
+        <section class="services-detail section">
+            <div class="container">
+                
+                <!-- Service 1 : Design Graphique -->
+                <div class="service-detail-block reveal fade-up" id="design-graphique">
+                    <div class="service-detail__header">
+                        <i class="fa-solid fa-pen-nib service-detail__icon"></i>
+                        <h2 class="service-detail__title">Design Graphique</h2>
+                    </div>
+                    <div class="service-detail__grid">
+                        <div class="service-detail__description">
+                            <p>
+                                Création d'identités visuelles complètes, conception d'affiches, flyers, 
+                                supports publicitaires et contenus pour réseaux sociaux. Chaque design 
+                                est pensé pour renforcer votre image de marque.
+                            </p>
+                            <ul class="service-detail__list">
+                                <li><i class="fa-solid fa-check"></i> Affiches événementielles</li>
+                                <li><i class="fa-solid fa-check"></i> Supports publicitaires</li>
+                                <li><i class="fa-solid fa-check"></i> Communication digitale</li>
+                                <li><i class="fa-solid fa-check"></i> Identité visuelle</li>
+                            </ul>
+                        </div>
+                        <div class="service-detail__preview">
+                            <img src="assets/images/services/image_6.jpeg" alt="Design Graphique" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 : Production -->
+                <div class="service-detail-block reveal fade-up" id="production">
+                    <div class="service-detail__header">
+                        <i class="fa-solid fa-video service-detail__icon"></i>
+                        <h2 class="service-detail__title">Production</h2>
+                    </div>
+                    <div class="service-detail__grid">
+                        <div class="service-detail__description">
+                            <p>
+                                Reportages, clips musicaux, podcasts et couverture de cérémonies. 
+                                De la captation au montage final, je vous accompagne sur toute la 
+                                chaîne de production audiovisuelle.
+                            </p>
+                            <ul class="service-detail__list">
+                                <li><i class="fa-solid fa-check"></i> Reportages</li>
+                                <li><i class="fa-solid fa-check"></i> Clips musicaux</li>
+                                <li><i class="fa-solid fa-check"></i> Podcasts</li>
+                                <li><i class="fa-solid fa-check"></i> Couverture d'événements</li>
+                            </ul>
+                        </div>
+                        <div class="service-detail__preview">
+                            <img src="assets/images/services/image_4.jpeg" alt="Production Vidéo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 : Formation -->
+                <div class="service-detail-block reveal fade-up" id="formation">
+                    <div class="service-detail__header">
+                        <i class="fa-solid fa-graduation-cap service-detail__icon"></i>
+                        <h2 class="service-detail__title">Formation</h2>
+                    </div>
+                    <div class="service-detail__grid">
+                        <div class="service-detail__description">
+                            <p>
+                                Des formations pratiques et adaptées à votre niveau pour maîtriser 
+                                les outils de création. Apprenez le montage vidéo, le design graphique, 
+                                les techniques de filmage et la photographie.
+                            </p>
+                            <ul class="service-detail__list">
+                                <li><i class="fa-solid fa-check"></i> Montage vidéo</li>
+                                <li><i class="fa-solid fa-check"></i> Design graphique</li>
+                                <li><i class="fa-solid fa-check"></i> Filmage</li>
+                                <li><i class="fa-solid fa-check"></i> Photographie</li>
+                            </ul>
+                        </div>
+                        <div class="service-detail__preview">
+                            <img src="assets/images/services/image_10.jpeg" alt="Formation" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA -->
+                <div class="services-detail__cta reveal fade-up">
+                    <h3>Intéressé par l'un de ces services ?</h3>
+                    <a href="contact.html" class="btn btn--primary btn--large">
+                        <span>Demander un devis</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        NELSON <span class="logo-accent">ART</span> PRO
+                    </a>
+                    <p class="footer__description">
+                        Communication visuelle et production multimédia.<br>New Vision, New World.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/nelsondevillas.kabuzi" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nelsondevillas?igsh=YzljYTk1ODg3Zg==" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/Nelsonartprodu1" class="footer__social-link" aria-label="X" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://vm.tiktok.com/ZS9FjSMYXDHpe-QXuNu/" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__nav-title">Contact</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:nelsonekabuzi@gmail.com">nelsonekabuzi@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+243973638617">+243 97 36 38 617</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 NELSON ART PRO. Tous droits réservés.</p>
+                <p class="footer__tagline">DEBVISE: New Vision, New World.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

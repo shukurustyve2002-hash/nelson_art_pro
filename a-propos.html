@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="À propos de NELSON ART PRO et Nelson KABUZI - Producteur, réalisateur et designer graphique à Bukavu.">
+    <title>À propos | NELSON ART PRO</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-mode">
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="preloader-text">NELSON</span>
+                <span class="preloader-dot">ART</span>
+                <span class="preloader-sub">PRO</span>
+            </div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- Header identique à index.html -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">NELSON <span class="logo-accent">ART</span> PRO</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="a-propos.html" class="nav__link active">À propos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link nav__link--cta">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun" style="display: none;"></i>
+                    <span class="theme-toggle__switch" id="theme-toggle"></span>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero__bg" style="background-image: url('assets/images/a-propos/page-hero-bg.jpg');"></div>
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content container reveal fade-up">
+                <span class="section__badge">À propos</span>
+                <h1 class="page-hero__title">Notre histoire, <span class="text-accent">notre vision</span></h1>
+            </div>
+        </section>
+
+        <!-- SECTION 1: DEBVISE / Entreprise -->
+        <section class="about-company section">
+            <div class="container">
+                <div class="about-company__grid">
+                    <div class="about-company__content reveal fade-left">
+                        <span class="section__badge">L'entreprise</span>
+                        <h2 class="section__title">DEBVISE : <span class="text-accent">New Vision, New World</span></h2>
+                        <p class="about-company__text">
+                            Nous sommes une entreprise de communication visuelle œuvrant dans le multimédia. 
+                            Nous proposons une stratégie de communication marketing et digitale à des MPME 
+                            dans le but de vendre leur image et de servir de pont avec le public cible.
+                        </p>
+                        <p class="about-company__text">
+                            Notre objectif principal est de vendre l'image de marque, de communiquer à travers 
+                            des productions audio-visuelles, le design graphique et bien plus.
+                        </p>
+                        <div class="about-company__values">
+                            <div class="value-item">
+                                <i class="fa-solid fa-bullseye"></i>
+                                <span>Stratégie</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <span>Créativité</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span>Proximité</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-company__image reveal fade-right">
+                        <div class="image-wrapper">
+                            <!-- Remplacer par image équipe/entreprise -->
+                            <img src="assets/images/a-propos/image_15.png" alt="NELSON ART PRO - Équipe" loading="lazy">
+                            <div class="image-wrapper__accent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Nelson KABUZI -->
+        <section class="about-nelson section section--dark">
+            <div class="container">
+                <div class="about-nelson__grid">
+                    <div class="about-nelson__image reveal fade-left">
+                        <div class="image-wrapper image-wrapper--portrait">
+                            <!-- Remplacer par portrait de Nelson -->
+                            <img src="assets/images/a-propos/image_7.jpeg" alt="Nelson KABUZI" loading="lazy">
+                            <div class="image-wrapper__accent image-wrapper__accent--bottom"></div>
+                        </div>
+                    </div>
+                    <div class="about-nelson__content reveal fade-right">
+                        <span class="section__badge">Le fondateur</span>
+                        <h2 class="section__title">Nelson <span class="text-accent">KABUZI</span></h2>
+                        <p class="about-nelson__role">Producteur • Réalisateur • Designer Graphique</p>
+                        <p class="about-nelson__text">
+                            Nelson KABUZI, de son nom complet Kabuzi Katameya Nelson, est un producteur, 
+                            réalisateur et designer graphique de formation. Gradué en sciences de l'information 
+                            et de la communication, et licencié en Edition et Multimédia à l'Université 
+                            Officielle de Bukavu.
+                        </p>
+                        <p class="about-nelson__text">
+                            Par sa créativité et son sens rigoureux du travail, il a su produire des clips 
+                            musicaux d'artistes locaux, des reportages, couvrir des cérémonies de mariages 
+                            et bien plus encore. Président Directeur Général de NELSON ART PRO.
+                        </p>
+                        <p class="about-nelson__text">
+                            Actuellement Community Manager de centres de recherches, médias en ligne et 
+                            resto-Bar, il relie le public cible avec ces derniers. Écrivain et rappeur 
+                            gospel, il a à son actif 5 chansons Rap-gospel et un recueil de textes poétiques.
+                        </p>
+                        
+                        <div class="about-nelson__tags">
+                            <span class="tag"><i class="fa-solid fa-microphone"></i> Rap Gospel (5 titres)</span>
+                            <span class="tag"><i class="fa-solid fa-book"></i> Recueil poétique</span>
+                            <span class="tag"><i class="fa-solid fa-users"></i> Community Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        NELSON <span class="logo-accent">ART</span> PRO
+                    </a>
+                    <p class="footer__description">
+                        Communication visuelle et production multimédia.<br>New Vision, New World.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/nelsondevillas.kabuzi" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nelsondevillas?igsh=YzljYTk1ODg3Zg==" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/Nelsonartprodu1" class="footer__social-link" aria-label="X" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://vm.tiktok.com/ZS9FjSMYXDHpe-QXuNu/" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__nav-title">Contact</h4>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:nelsonekabuzi@gmail.com">nelsonekabuzi@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+243973638617">+243 97 36 38 617</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 NELSON ART PRO. Tous droits réservés.</p>
+                <p class="footer__tagline">DEBVISE: New Vision, New World.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
