@@ -1754,3 +1754,50 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(0);
     }
 }
+/* ===== LIGNE CONCEPTEUR (tout en bas) ===== */
+.footer__designer {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer__designer p {
+    font-family: var(--font-primary);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.footer__designer-link {
+    color: var(--color-yellow);
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.footer__designer-link:hover {
+    color: var(--color-yellow-hover);
+    text-decoration: underline;
+}
+
+.footer__designer-whatsapp {
+    color: #25D366;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer__designer-whatsapp:hover {
+    color: #128C7E;
+}
+
+.footer__designer-whatsapp i {
+    font-size: 13px;
+}
