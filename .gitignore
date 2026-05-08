@@ -1,0 +1,21 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Dossier node_modules (si vous en avez)
+node_modules/
+
+# Fichiers volumineux (optionnel - à adapter)
+# *.mp4
+# *.mov
